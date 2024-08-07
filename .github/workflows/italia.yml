@@ -2,7 +2,7 @@ name: Domain Renewal Reminder
 
 on:
   schedule:
-    - cron: '0 0 */3 * *'  # 每3天运行一次
+    - cron: '0 0 */4 * *'  # 每4天运行一次
   workflow_dispatch:
 
 jobs:
