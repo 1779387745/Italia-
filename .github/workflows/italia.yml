@@ -2,7 +2,7 @@ name: Domain Renewal Reminder
 
 on:
   schedule:
-    - cron: '0 0 */4 * *'  # 每4天运行一次
+    - cron: '0 0 */170 * *'  # 每170天运行一次
   workflow_dispatch:
 
 jobs:
@@ -15,4 +15,4 @@ jobs:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        curl -s -X POST https://api.telegram.org/bot${{ env.TELEGRAM_TOKEN }}/sendMessage -d chat_id=${{ env.TELEGRAM_CHAT_ID }} -d text="Reminder: 意大利容器节点，快到期了，快去续！!"
+        curl -s -X POST https://api.telegram.org/bot${{ env.TELEGRAM_TOKEN }}/sendMessage -d chat_id=${{ env.TELEGRAM_CHAT_ID }} -d text="Reminder: ppua域名是时候续期了！!"
